@@ -1,4 +1,7 @@
 <?php 
+
+groups_add();
+
 function groups_add(){
   include('connect.php');
   $sql = 'INSERT INTO (caption) VALUES ('.$_POST['caption'].')';
@@ -10,7 +13,7 @@ function groups_add(){
   <form>
     <div class="form-group">
       <label>Название группы</label>
-      <input type="text" name="caption" class="form-control" placeholder="Введите название группы">
+      <input type="text" name="caption" id="caption" class="form-control" placeholder="Введите название группы">
     </div>
 
     <button type="submit" class="btn btn-primary">Сохранить</button>
